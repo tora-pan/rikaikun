@@ -1,9 +1,9 @@
 import { Config } from '../configuration';
 import { DictEntryData, RcxDict } from '../data';
 import { expect, use } from '@esm-bundle/chai';
+import Sinon from 'sinon';
 import chaiLike from 'chai-like';
 import chaiThings from 'chai-things';
-import Sinon from 'sinon';
 import sinonChrome from 'sinon-chrome';
 
 // Extend chai-like to allow using regex for fuzzy string matching inside
@@ -210,9 +210,7 @@ describe('data.ts', function () {
     it('should do correct hiragana lookup when parsing voiced and semi-voiced half-width katakana', function () {
       // const expected = 'ﾃﾞｯｽｸﾄｯﾌﾟ'
       const expected = 'ﾎﾟｼﾞﾃｨﾌﾞ';
-      expect(rcxDict.convertToHiragana(expected)).to.equal(
-        'ぽじてぃぶ'
-      );
+      expect(rcxDict.convertToHiragana(expected)).to.equal('ぽじてぃぶ');
     });
   });
 

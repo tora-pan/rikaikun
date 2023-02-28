@@ -29,6 +29,7 @@
     "test:browserstack": "npm run test -- --browserstack",
     "test:watch": "npm run test -- --watch",
     "test:update-baselines": "npm run test -- --update-visual-baseline",
+    "test:code-coverage": "wtr \"extension/test/data_test.ts\" --coverage",
     "update-db": "node --loader ts-node/esm utils/update-db.ts"
   },
   "repository": {
